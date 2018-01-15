@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+
+    <style>
+        #border{
+              padding: 20px;
+              padding-top: 180px;
+          }
+
+          #form{
+              margin-left: 400px
+          }
+         #btn{
+             margin-left: 77px;
+    
+         }
+         #login{
+             color: whitesmoke;
+             text-align: center;
+             font-size: 35px;
+              background-color:  #F92259;
+              padding: 20px
+         }
+    </style>
+</head>
+<body>
+     
+  <div id="login">Login Page</div>
+
+    <div id="border">
+        <form method="POST" action="/login" id="form">
+        
+        <div class="form-group">
+         <label> Username: <input name="username" placeholder="username"> </label><br><br>
+         </div>
+        <div class="form-group">
+           <label> Password: <input type="password" name="password" placeholder="password"></label><br><br>
+        </div>
+            <input class="btn btn-danger" id="btn" type="Submit">
+         
+    </form>
+    </div>
+
+</body>
+</html>

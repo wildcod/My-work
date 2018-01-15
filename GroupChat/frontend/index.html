@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="jquery-3.2.1.js"></script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+
+    <style>
+    
+        #name{
+                  padding-left : 400px;
+                  padding-top: 100px;
+              }
+        #div-2{
+                    font-size: 40px;
+    
+              }
+        #head{
+            font-size: 35px;
+            background-color: #F92259;
+            color: whitesmoke;
+            text-align: center;
+            padding: 20px;
+        }
+        #chatdiv{
+            padding-left : 400px;
+            padding-top: 180px;
+        }
+        h4{
+            color: #F92259
+        }
+    
+        #namebtn{
+            margin-left: 50;
+        }
+    
+        
+        </style>
+</head>
+<body>
+    
+    <div id="head">Group Chat</div>
+<h4> Created By Sahil</h4>
+
+
+
+    <div id="chat-div" style="padding-left : 400px;
+    padding-top: 50px;" >
+            <input id="chat" type="text" placeholder="type...">
+            <button id="btn3" class="btn btn-danger">Submit</button>
+            <ul id="list"></ul>
+    </div>
+
+          
+
+</body>
+</html>
