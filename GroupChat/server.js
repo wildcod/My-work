@@ -7,6 +7,9 @@ const http = require('http')
 const passport = require('./passport')
 const app = express()
 
+
+const SERVER_PORT = process.env.PORT || 5432
+
 let userSocket = {}
 
 app.use(express.json())
@@ -56,4 +59,4 @@ io.on('connection' , (socket) => {
     })
 })
 
-server.listen(5432, () => console.log('server is started'))
+server.listen(SERVER_PORT, () => console.log('server is started'))

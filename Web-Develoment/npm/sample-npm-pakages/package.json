@@ -1,0 +1,11 @@
+{
+  "name": "sample-npm-pakages",
+  "version": "0.1.0",
+  "description": "A very nice nodejs project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "sahil knaojia <kanojias494@gmail.com>",
+  "license": "ISC"
+}

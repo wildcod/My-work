@@ -1,0 +1,21 @@
+div{
+	background-color: green;
+	border: 2px solid black;
+	margin: 3px;
+	padding : 2px;
+
+}
+
+#div2{
+      position: fixed;
+      top: 100px;
+      left: 500px;
+      
+}
+
+#div3{
+	position: absolute;
+	top: 100px;
+
+}
+

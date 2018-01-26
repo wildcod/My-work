@@ -1,0 +1,25 @@
+.container{
+    display: flex;
+    background-color: lightblue;
+    height: 300px;
+    /* flex-direction: row-reverse; */
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: stretch;
+    align-content: center;
+    
+}    
+.item{
+    height: 40px;
+    width: 40px;
+    background-color: lightcoral;
+    margin: 20px;
+    padding-left: 10px;
+}
+
+#item1{
+    order: 1;
+}
+
+
+

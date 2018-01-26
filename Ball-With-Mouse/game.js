@@ -7,16 +7,28 @@ var ballSpeedY = 7;
 const PADDLE_WIDTH = 100;
 const PADDLE_THICKNESS = 10;
 const PADDLE_DIST_FROM_EGDE = 60;
+const BRICK_W = 100;
+const BRICK_H = 50;
+const BRICK_COUNT = 8;
+
+// var brick0 = true;
+// var brick1 = false;
+// var brick2 = false;
+// var brick3 = true;
+var brickGrid = new Array(BRICK_COUNT);
 
 var PaddleX = 400;
+
+var mouseX = 0;
+var mouseY = 0;
 
 function updateMousePos(evt){
 
     var rect = canvas.getBoundingClientRect();
     var root = document.documentElement;
 
-    var mouseX = evt.clientX - rect.left - root.scrollLeft;
-   // var mouseY = evt.clientY - rect.top - root.scrollTop;
+     mouseX = evt.clientX - rect.left - root.scrollLeft;
+     mouseY = evt.clientY - rect.top - root.scrollTop;
 
     PaddleX = mouseX - PADDLE_WIDTH / 2;
 }
@@ -32,6 +44,8 @@ window.onload = function() {
 
     canvas.addEventListener('mousemove', updateMousePos)
 
+    brickReset()
+
 }
 
 function updateAll() {
@@ -42,6 +56,18 @@ function updateAll() {
 function ballRest(){
        ballX = canvas.width/2;
        ballY = canvas.height/2;
+}
+
+function brickReset(){
+    for(var i=0 ; i<BRICK_COUNT; i++){
+        if(Math.random() < 0.5) {
+           brickGrid[i] = true;
+        }
+        else{
+            brickGrid[i] = false;
+        }
+    }
+    
 }
 
 function moveAll(){
@@ -77,15 +103,29 @@ function moveAll(){
        ballX < PaddleRightEdgeX // left
     ){
         ballSpeedY *= -1;
+
+        var centerOfPaddleX = PaddleX + PADDLE_WIDTH/2;
+        var ballDistFromPaddleCenterX = ballX - centerOfPaddleX;
+        ballSpeedX = ballDistFromPaddleCenterX * 0.35;
     }
 
 }
 
+function drawBricks() {
+    for(var i=0 ; i<BRICK_COUNT; i++){
+        if(brickGrid[i]){
+            colorRec(BRICK_W*i,0, BRICK_W-2,BRICK_H, "blue")
+      }
+    }
+}
 
 function drawAll(){
     colorRec(0,0, canvas.width, canvas.height,"black")
     colorCircle(ballX,ballY, 10, "white")
     colorRec(PaddleX, canvas.height-PADDLE_DIST_FROM_EGDE, PADDLE_WIDTH, PADDLE_THICKNESS,"white")
+    drawBricks();
+    colorText(mouseX+","+mouseY , mouseX,mouseY, "yellow")
+     
    
 }
 
@@ -99,5 +139,9 @@ function colorCircle(centerX,centerY, radius, fillcolor){
     canvasContent.beginPath();
     canvasContent.arc(centerX,centerY, radius, 0, Math.PI*2,true)
     canvasContent.fill();
+}
 
+function colorText(showWords, textX,textY, fillColor){
+    canvasContent.fillStyle = fillColor
+    canvasContent.fillText(showWords, textX,textY)
 }

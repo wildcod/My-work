@@ -1,0 +1,50 @@
+/*div{
+	height: 80px;
+	width: 80px;
+	margin: 40px;
+	background-color: blue;
+}*/
+
+@keyframes slides{
+	from{
+		margin-left: 0px;
+	}
+	to{
+		margin-left: 150px;
+	}
+}
+
+/*#div2{
+	animation-name:  slides;
+	animation-duration: 2s;
+	animation-iteration-count: 30;
+}*/
+@-webkit-keyframes move_eye 
+{ from { 
+	margin-left: 0%;
+	 } 
+  to {
+    margin-left: 100%; 
+   }
+   }
+#div1{
+	background-color: black;
+    width: 150px;
+    margin-left: 20px;
+}
+#div2{
+	color: white;
+}
+#div3{
+	width: 1px;
+	height: 20px;
+	position: relative;
+	bottom: 18px;
+	background-color: red;
+	background-color: rgba(255,0,0,0.9) ;
+ 
+
+	animation-name: slides;
+	animation-duration: 4s;
+     -webkit-animation: 4s linear 0s infinite alternate move_eye;
+}

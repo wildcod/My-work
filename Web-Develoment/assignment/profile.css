@@ -1,0 +1,33 @@
+.style{
+    font-family: Lato;
+    font-family: Gloria Hallelujah;
+}
+body{
+	background-color:  #606060;
+	border : 2px solid  #e62e00;
+	margin: 30px 250px 0 250px;
+	padding-left: 5px;
+	padding-top: 5px;
+
+}
+div{
+	color: #85adad;
+}
+a{
+	color:  #999966;
+}
+a:hover{
+	background-color:  #ff8080;
+}
+h1{
+	color: #F0F0F0;
+
+}
+hr{
+	width: 800px;
+	color: white;
+}
+h2{
+	text-align: center;
+	color: #b3b3b3;
+}

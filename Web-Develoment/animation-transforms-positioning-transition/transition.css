@@ -1,0 +1,31 @@
+div{
+	margin: 100px;
+}
+
+#div1{
+	height:80px;
+	width: 80px;
+	background-color: red;
+}
+
+#div2{
+	height:80px;
+	width: 80px;
+	background-color: blue;
+}
+
+#div1:hover {
+	 height: 40px;
+	 background-color: yellow;
+     transition: height 2s , background 2s;
+
+}
+
+div:hover + div{
+ 	margin-left: 500px;
+ 	height: 300px;
+ 	width: 200px;
+    transition: height 2s , margin 5s;
+}
+
+
