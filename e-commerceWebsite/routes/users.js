@@ -9,6 +9,8 @@ route.get('/' , (req, res) => {
            error : "could not retrive user"     
          })
      })
+
+
 })
 
 route.post('/' , (req, res) => {

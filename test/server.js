@@ -1,15 +1,16 @@
 const express = require('express')
+const route = require('./routes')
 const path = require('path')
+
 const app = express()
 
-
-const SERVER_PORT = process.env.PORT || 3333
-
-app.use('/public' , express.static(path.join(__dirname, 'public')))
-
-app.get('/' , (req, res) => {
-    res.send("Hello from backend")
-})
+app.use(express.json())
+app.use(express.urlencoded({extended : true}))
 
 
-app.listen(SERVER_PORT, () => console.log("Server is started"))
+app.use('/' , express.static(path.join(__dirname , 'frontend')))
+app.set('view engine' , 'hbs')
+app.use('/api' , route)
+
+
+app.listen(1001 , () => console.log('server is started'))

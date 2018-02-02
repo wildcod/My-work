@@ -8,7 +8,7 @@ const passport = require('./passport')
 const app = express()
 
 
-const SERVER_PORT = process.env.PORT || 5432
+const SERVER_PORT =  7000
 
 let userSocket = {}
 
