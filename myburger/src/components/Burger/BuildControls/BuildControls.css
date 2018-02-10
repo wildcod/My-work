@@ -1,0 +1,9 @@
+.BuildControls {
+
+    width : 100px;
+    background-color: #cf8f2e;
+    align-items: center;
+    box-shadow: 0 2px 1px #ccc;
+    padding: 10px 0;
+
+}

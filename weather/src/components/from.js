@@ -4,11 +4,14 @@ import './from.css'
 class Form extends Component {
      render(){
          return (
-             <div  classname="form" >
-                    <h1>Check Wheather </h1>
-                    Country :<input type="text" placeholder="Country" /><br/>
-                    City : <input type="text" placeholder="City" /><br/>
-                    <button className="btn">Check</button>
+             <div  className="root">
+                    <h1 className="header">Check Wheather </h1>
+                <div className="info">
+                    Country :<input className="ctry" type="text" placeholder="Country" /><br/>
+                    City :   <input className="city"type="text" placeholder="City" /><br/>
+                    <button className="btn  btn btn-primary">Check</button>
+                </div>
+       
              </div>
          )
      }
