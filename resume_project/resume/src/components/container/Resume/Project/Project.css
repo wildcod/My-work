@@ -1,0 +1,20 @@
+#Project {
+    margin-left: 240px;
+    font-weight: 100;
+    font-size: 14px;
+}
+#heading-Project{
+    font-size: 20px;
+    margin-right: 433px;
+    font-weight: 100;
+    font-family: 'Bitter' , 'Serif';
+}
+
+#Pro {
+     margin-top : 60px;
+}
+
+#Pro:hover{
+    border : 2px solid red;
+    cursor: pointer;
+}

@@ -1,0 +1,20 @@
+#Experience {
+    margin-left: 230px;
+    font-weight: 100;
+    font-size: 14px;
+}
+#heading-Experience{
+    font-size : 20px;
+    margin-right: 400px;
+    font-weight: 100;
+    font-family: 'Bitter' , 'Serif';
+}
+
+#Exp {
+    margin-top : 100px;
+}
+
+#Exp:hover{
+    border : 2px solid red;
+    cursor: pointer;
+}

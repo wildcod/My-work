@@ -1,0 +1,17 @@
+#heading-Contact{
+    font-family: 'Bitter' , 'Serif';
+}
+
+#Contact {
+    margin-left : 40px;
+    margin-top : 130px;
+}
+
+#List {
+   margin-right : 40px;
+}
+
+#Contact:hover{
+    border : 2px solid red;
+    cursor: pointer;
+}

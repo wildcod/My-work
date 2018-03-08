@@ -1,0 +1,19 @@
+#Education {
+    margin-left: 240px;
+    font-weight: 100;
+    font-size: 14px;
+}
+#heading-Education{
+    font-size: 20px;
+    margin-right: 408px;
+    font-weight: 100px;
+    font-family: 'Bitter' , 'Serif';
+}
+#Edu {
+     margin-top : 60px;
+}
+
+#Edu:hover{
+    border : 2px solid red;
+    cursor: pointer;
+}
