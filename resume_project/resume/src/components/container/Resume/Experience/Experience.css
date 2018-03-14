@@ -1,8 +1,17 @@
 #Experience {
-    margin-left: 230px;
-    font-weight: 100;
-    font-size: 14px;
+        /* margin-left: 230px; */
+        font-weight: 100;
+        font-size: 14px;
+   
 }
+
+
+#ExpLeft{
+     margin-right: 100px; 
+    font-weight: 100;
+    font-size: 12px; 
+}
+
 #heading-Experience{
     font-size : 20px;
     margin-right: 400px;
@@ -17,4 +26,8 @@
 #Exp:hover{
     border : 2px solid red;
     cursor: pointer;
+}
+
+#title{
+    text-align: left;
 }

@@ -1,6 +1,7 @@
 import React , {Component} from "react"
 import Preview from '../Preview/Preview'
-import Editor from '../Editor/Editor'
+import NameEditor from '../Editor-Com/Name_Editor/Name_Editor'
+import ExpEditor from '../Editor-Com/Exp_Editor/Exp_Editor'
 import './Layout.css'
 
 class Layout extends Component {
@@ -9,10 +10,20 @@ class Layout extends Component {
         return <div className="container-fluid">
                    <div className="row">
                               <div className="col-md-3">
-                                    <Editor NameChange = {this.props.NameChange}/>
+                                    <NameEditor NameChange = {this.props.NameChange} />
+
+                                     <ExpEditor 
+                                            JobTitleChange = {this.props.JobTitleChange}
+                                            CompanyChange= {this.props.CompanyChange}
+                                            StartDateChange={this.props.StartDateChange}
+                                            EndDateChange={this.props.EndDateChange}
+                                            DescriptionChange={this.props.DescriptionChange}
+                                            AddressChange={this.props.AddressChange}
+                                    />
                               </div>
                               <div className="col-md-9">
-                                   <Preview State = {this.props.State}/>
+                                   <Preview State = {this.props.State}
+                                   />
                               </div>
                      </div> 
                      </div>

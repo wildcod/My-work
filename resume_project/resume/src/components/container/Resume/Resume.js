@@ -9,7 +9,7 @@ class Resume extends Component {
     render(){
         return <div id="Resume">
                     <Name State = {this.props.State}/> 
-                    <Experience/>
+                    <Experience  State = {this.props.State}/>
                     <Education/>
                     <Project/>
              </div>
