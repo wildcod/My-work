@@ -3,6 +3,7 @@ import Name from './Name/Name'
 import Experience from './Experience/Experience'
 import Education from './Education/Eduction'
 import Project from './Project/Project' 
+import Certificate from './Certificate/Certificate'
 import './Resume.css'
 class Resume extends Component {
      
@@ -10,8 +11,9 @@ class Resume extends Component {
         return <div id="Resume">
                     <Name State = {this.props.State}/> 
                     <Experience  State = {this.props.State}/>
-                    <Education/>
-                    <Project/>
+                    <Education State = {this.props.State}/>
+                    <Project State= {this.props.State}/>
+                    <Certificate State= {this.props.State}/>
              </div>
     }
 }

@@ -17,4 +17,9 @@
     cursor: pointer;
 }
 
+#link{
+    color: black;
+    text-decoration: unset;
+}
+
 

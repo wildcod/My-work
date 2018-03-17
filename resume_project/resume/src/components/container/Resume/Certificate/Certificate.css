@@ -1,20 +1,20 @@
-#Project {
+#Certificate {
     margin-left: 28px;
     font-weight: 100;
     font-size: 14px;
 }
-#heading-Project{
+#heading-Certificate{
     font-size: 20px;
     margin-right: 433px;
     font-weight: 100;
     font-family: 'Bitter' , 'Serif';
 }
 
-#Pro {
+#Cer {
      margin-top : 60px;
 }
 
-#Pro:hover{
+#Cer:hover{
     border : 2px solid red;
     cursor: pointer;
 }

@@ -9,7 +9,7 @@ class Preview extends Component {
         return  <div id="Preview" className="container-fluid">
                      <div className="row">
                               <div >
-                                    <SideBlog/>
+                                    <SideBlog State = {this.props.State}/>
                               </div>
                               <div className="col">
                                    <Resume State = {this.props.State}/>

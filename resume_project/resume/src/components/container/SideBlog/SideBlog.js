@@ -7,8 +7,8 @@ class SideBlog extends Component {
     
     render() {
          return <div id="SideBlog">
-                       <Contact/>
-                       <Skills/>
+                       <Contact State = {this.props.State}/>
+                       <Skills State = {this.props.State}/>
                 </div>
     }
      

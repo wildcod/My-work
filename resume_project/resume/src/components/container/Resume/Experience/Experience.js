@@ -1,9 +1,11 @@
 import React ,{Component} from 'react'
+import {Link} from 'react-router-dom'
 import './Experience.css'
 class Experience extends Component {
      
     render(){
         return <div>
+            <Link to="/experience" id="link">
                <div id="Exp" className="contaliner-fluid">
                    <h1 id="heading-Experience" > Experience</h1><br/>
                     <div className="row">
@@ -22,6 +24,7 @@ class Experience extends Component {
                               </div>
                      </div>
                 </div>
+                </Link>
              </div>
     }
 }

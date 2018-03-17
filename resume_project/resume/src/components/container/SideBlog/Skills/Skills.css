@@ -3,8 +3,10 @@
 }
 
 #Skills {
-    margin-top: 80px;
-    margin-right: 125px;
+     margin-top: 80px; 
+    /* margin-right: 125px;  */
+    text-align: center;
+    margin-left: 40px;
 }
 
 #List{
@@ -14,4 +16,9 @@
 #Skills:hover{
     border : 2px solid red;
     cursor: pointer;
+}
+
+#link{
+    color: black;
+    text-decoration: unset;
 }
