@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Calculator from './components/calculator/calculator';
 import Buttons from './components/Buttons/Buttons';
+import Layout from './components/Layout/Layout'
 
 const CalculatorOperation = {
      '/':(prevValue , nextValue) => prevValue / nextValue,
@@ -149,6 +150,7 @@ class App extends Component {
 
     return (
       <div className="App">
+      <Layout>
           <Calculator>
             <div className="disp">{this.state.displayValue}</div>
                 <Buttons
@@ -161,6 +163,7 @@ class App extends Component {
                 inputPi = {() => this.inputPiHandler.bind(this)}
                 />
           </Calculator>
+        </Layout>
       </div>
     );
   }
