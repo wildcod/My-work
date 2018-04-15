@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="jquery.js"></script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+</head>
+<body>
+    
+     <h1 id="head"> Library</h1>
+
+     <button id="1"class="btn btn-danger">Issue</button>
+     <button id="2"class="btn btn-danger">Return</button>
+     <button id="3"class="btn btn-danger">View Books</button>
+     <button class="btn btn-danger" id="view">View Status</button>
+
+     <div id="form"> <h5 id="issue">Issue</h5> 
+              <input type="text" id="uid" placeholder="User id"><br><br>
+              <input type="text" id="name" placeholder="Name"><br><br>
+                <input type="text" id="bktitle" placeholder="Book title"><br><br>
+                <input type="text" id="issuedate" placeholder="Issuedate"><br><br>
+                <input type="text" id="returndate" placeholder="Returndate"><br><br>
+                <button  id="btn" class="btn btn-primary"> Issue</button>
+
+   </div>
+
+      <div id="form2"> 
+            <input type="text" placeholder="User Id" id="Cid"><br><br>
+            <input type="text" placeholder="Name" id="Cname"><br><br>
+            <button id="btn2" class="btn btn-primary">Check</button>
+      </div>
+
+      <table class="table" id="tb2" >
+        <thead>
+             <tr>
+                  <th class="col-2" >UserID</th>
+                  <th class="col-2" >Name</th>
+                  <th class="col-2" >No. of Un-IssueBooks</th>
+                  <th class="col-2" >No. of IssueBooks</th>
+                  <th class="col-2" >Book-Title</th>
+                  <th class="col-2" >IssueDate</th>
+                  <th class="col-2" >ReturnDate</th>
+             </tr>
+        </thead>
+     <tbody id="mylist">
+
+  <br>
+      <table class="table" id="tb" >
+        <thead>
+             <tr>
+                  <th class="col-2" >UserID</th>
+                  <th class="col-2" >Name</th>
+                  <th class="col-2" >No. of Un-IssueBooks</th>
+                  <th class="col-2" >No. of IssueBooks</th>
+                  <th class="col-2" >Book-Title</th>
+                  <th class="col-2" >IssueDate</th>
+                  <th class="col-2" >ReturnDate</th>
+             </tr>
+        </thead>
+     <tbody id="list">
+     
+    
+    </tbody>
+</table> 
+
+
+     <div id="form1"> <h5 id="return">Return</h5> 
+        <input type="text" id="Ruid" placeholder="User id"><br><br>
+        <input type="text" id="Rname" placeholder="Name"><br><br>
+          <input type="text" id="Rbktitle" placeholder="Book title"><br><br>
+          <button  id="btn1" class="btn btn-primary"> Return</button>
+
+     </div>
+
+
+     <table class="table" id="tb3" >
+      <thead>
+           <tr>
+                <th class="col-4" >No.</th>
+                <th class="col-4" >Book Title</th>
+                <th class="col-4" >Author Name</th>
+           </tr>
+      </thead>
+   <tbody id="tb3list">
+   
+  
+  </tbody>
+</table> 
+
+        <div id="msg"></div>
+</body>
+</html>

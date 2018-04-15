@@ -1,0 +1,42 @@
+/* #view{
+    margin-left: 100px;
+    margin-top: 40px;
+} */
+
+#issue{
+    margin-left: 50px;
+    display: none;
+}
+
+#form{
+    text-align: center;
+    display: none;
+    margin-top: 20px;
+}
+
+#head{
+    text-align: center;
+}
+
+#form1{
+    text-align: center;
+    display: none;
+}
+#form2{
+    margin-left: 100px;
+    margin-top: 10px;
+    display: none;
+}
+
+#tb{
+    margin-top: 20px;
+    display: none;
+}
+
+#tb2{
+    display: none;
+}
+
+#tb3{
+    display: none;
+}
