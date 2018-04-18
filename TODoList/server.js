@@ -22,6 +22,19 @@ app.get('/view' , (req,res) => {
 
 })
 
+app.get('/delete' , (req,res) => {
+
+    db.deletePersons()
+    .then(() => {
+        res.redirect('/')
+
+    })
+    .catch((err) => {
+        res.send(err)
+    })
+
+})
+
 app.post('/add' , (req,res) => {
     
     db.addNewList(req.body.value)
@@ -37,4 +50,4 @@ app.post('/add' , (req,res) => {
 
 
 
-app.listen(2000, () => console.log("Server is start at port 2000"))
+app.listen(2222, () => console.log("Server is start at port 2222"))

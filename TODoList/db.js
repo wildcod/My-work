@@ -43,6 +43,26 @@ function getAllPersons () {
 
 }
 
+function deletePersons () {
+
+    return new Promise(function (resolve,reject){
+
+        connection.query(
+            'DELETE FROM todolist ORDER BY id desc limit 1',
+            function (err, rows,cols){
+                if(err){
+                    reject(err)
+                }
+                else{
+                    resolve(rows)
+                }
+            }
+        )
+
+    })
+
+}
+
 function addNewList (value){
 
     return new Promise(function (resolve,reject){
@@ -66,5 +86,5 @@ function addNewList (value){
 }
 
 exports = module.exports = {
-    getAllPersons,addNewList
+    getAllPersons,addNewList,deletePersons
 }
