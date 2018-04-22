@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+   <style>
+       #form{
+           text-align: start;
+           margin-top: 20px;
+           margin-left: 40%;
+       }
+       h2{
+           text-align:center;
+       }
+   </style>
+   <!-- Font Awesome -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- Bootstrap core CSS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+<!-- Material Design Bootstrap -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.0/css/mdb.min.css" rel="stylesheet">
+</head>
+<body>
+    
+        <h2> Details</h2>
+
+    <form id="form" method="POST" action="/finalpage">
+
+        <b>Name:</b> <input type ="text" name="name" placeholder="Name"><br><br>
+         <b>Mobile Number:</b>  <input type ="number" name="phoneNumber" placeholder="Mobile Number"><br><br>
+         <b>Address:</b>  <input type ="text" name="address" placeholder="Address"><br><br>
+         <b>Pincode:</b>  <input type ="number" name="pincode" placeholder="Pincode"><br><br>
+         <b>State:</b>  <input type ="text" name="state" placeholder="State"> <br><br>
+         <b>Payment:</b>  <select name="payment"><option>cash on delivery</option><option>Debit/Credit CArd</option></select><br><br>
+           <button class="btn btn-primary">Submit</button>    
+    </form>
+</body>
+</html>

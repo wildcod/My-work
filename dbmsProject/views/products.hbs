@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- Bootstrap core CSS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+<!-- Material Design Bootstrap -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.0/css/mdb.min.css" rel="stylesheet">
+<style>
+      #pro{
+            text-align: center;
+            margin-top: 20px;
+      }
+</style>
+</head>
+<body>
+  <div id="pro">
+      <h1> Add Products</h1>
+      <form method="POST" action="/products">
+            <input name="name" placeholder="ProductName"><br><br>
+            <input name="manufacturer" placeholder="Manufacturer"><br><br>
+            <input name="price" placeholder="Price"><br><br>
+            <button class="btn btn-primary">Submit</button>
+      </form>
+      <br> 
+      <a href="/login">Login</a>  
+</div>
+
+</body>
+</html>
