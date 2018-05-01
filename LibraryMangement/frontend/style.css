@@ -3,11 +3,6 @@
     margin-top: 40px;
 } */
 
-#issue{
-    margin-left: 50px;
-    display: none;
-}
-
 #form{
     text-align: center;
     display: none;
@@ -23,7 +18,7 @@
     display: none;
 }
 #form2{
-    margin-left: 100px;
+    text-align: center;
     margin-top: 10px;
     display: none;
 }
@@ -39,4 +34,7 @@
 
 #tb3{
     display: none;
+}
+#msg{
+    text-align: center;
 }

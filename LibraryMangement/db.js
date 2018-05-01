@@ -41,6 +41,38 @@ connection.query(
         }
     }
 )
+
+connection.query(
+    `CREATE TABLE IF NOT EXISTS validusers (
+         userid  int(10),
+         password VARCHAR(20)
+         )`,
+    function(err,result){
+        if(err){
+            console.error(err)
+        }
+        else{
+            console.log("validusers Table was Succesfully created")
+        }
+    }
+)
+
+connection.query(
+    `CREATE TABLE IF NOT EXISTS libbooks (
+         id  int(6),
+         books VARCHAR(30),
+         author VARCHAR(20)
+         )`,
+    function(err,result){
+        if(err){
+            console.error(err)
+        }
+        else{
+            console.log("libooks Table was Succesfully created")
+        }
+    }
+)
+
  //  where users.userid = books.userid,
 function getAllUsers () {
 
@@ -65,7 +97,7 @@ function getAllUsers () {
 }
 
 function getStatus (Cname) {
-
+    console.log(Cname)
     return new Promise(function (resolve,reject){
 
         connection.query(

@@ -45,6 +45,7 @@ app.post('/Status' , (req,res) => {
 
     db.getStatus(req.body.Cname)
     .then((users) => {
+        console.log(users)
         res.send({users})
 
     })
@@ -77,7 +78,6 @@ app.post('/addBooks' , (req,res) => {
         return res.send("Limit over")
     }
 
-    console.log(req.body.Bktitle)
     db.addNewBook(parseInt(req.body.Id),req.body.Bktitle,req.body.Issuedate,req.body.Returndate)
     .then(() => {
         res.redirect('/')
@@ -100,7 +100,6 @@ app.post('/deleteReturn', (req,res) => {
 })
 
 app.post('/deleteBook' , (req, res) => {
-    console.log("server")
     db.deleteReturnBook(parseInt(req.body.RId),req.body.Rbktitle)
     .then(() => {
            res.redirect('/')
@@ -114,7 +113,6 @@ app.get('/getAllBooks', (req,res) => {
     
     db.getAllBooks()
     .then((books) => {
-        console.log(books)
          res.send({books})  
     })
     .catch(()=>{

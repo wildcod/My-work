@@ -22,7 +22,10 @@ $(function (){
      let tb3list = $('#tb3list')
      let tb3 = $('#tb3');
      let tb = $('#tb');
-   
+     let tb2 = $('#tb2')
+     let img = $('#img')
+     let form2 = $('#form2')
+     let ck = $('#ck')   
 
      view.click(function () {
 
@@ -30,13 +33,18 @@ $(function (){
        form1.hide()
        tb3.hide()
        tb.hide()
+       img.hide()
+       form2.hide()
+       tb2.hide()
+       msg.hide()
+       
 
          $.get('/view' , function (data,status){
             list.empty()
             console.log(data)
              for(array of data.users){
                 list.append('<tr>' +
-                list.append('<td>' + array.userid + '</td>') +
+                list.append('<th scope="row">' + array.userid + '</th>') +
                 list.append('<td>' + array.name + '</td>') +
                 list.append('<td>' + array.unIssuebooks+ '</td>') +
                 list.append('<td>' + array.Issuebooks + '</td>') +
@@ -54,6 +62,7 @@ $(function (){
      })
 
      btn2.click(function () {
+ 
 
        let Cname = $('#Cname').val();
 
@@ -64,7 +73,7 @@ $(function (){
            let i = 1;
             for(array of data.users){
                mylist.append('<tr>' +  
-               mylist.append('<td>' + i + '</td>') +
+               mylist.append('<th scope="row">' + i + '</th>') +
                mylist.append('<td>' + array.name + '</td>') +
                mylist.append('<td>' + array.unIssuebooks+ '</td>') +
                mylist.append('<td>' + array.Issuebooks + '</td>') +
@@ -77,7 +86,8 @@ $(function (){
            }
 
         })
-
+        tb2.show()
+    
     })
 
      btn.click(function(){
@@ -85,8 +95,29 @@ $(function (){
           let Id = parseInt(uid.val());
           let Name = name.val();
           let Bktitle = bktitle.val()
-          let Issuedate = issuedate.val()
-          let Returndate = returndate.val()
+
+        let today = new Date();
+        let dd = today.getDate();
+        let mm = today.getMonth()+1; //January is 0!
+        let yyyy = today.getFullYear();
+        let rmm = mm + 1;
+
+        if(dd<10) {
+            dd = '0'+dd
+        } 
+
+        if(mm<10) {
+            mm = '0'+mm
+        } 
+        if(rmm<10) {
+            rmm = '0'+rmm
+        }
+
+        today = dd + '/' + mm + '/' + yyyy;
+        let rdate =  dd + '/' + rmm + '/' + yyyy;
+
+        let Issuedate = today
+        let Returndate = rdate
 
           console.log(Bktitle);
           console.log(typeof(Id))
@@ -99,9 +130,11 @@ $(function (){
           function(data){
               console.log(data)
                  if(data === "Limit over"){
+                     msg.empty()
                     msg.append('<h5>' + 'Not eligilble' + '</h5>')
                  }
                  else{
+                     msg.empty()
                     msg.append('<h5>' + 'Issue Successfully' + '</h5>')
                  }
           })
@@ -117,6 +150,7 @@ $(function (){
 
         $.post('/deleteReturn', {RId:RId,RName:RName}, 
         function(data){
+            msg.empty()
                msg.append('<h5>' + 'Returnded Successfully' + '</h5>')
         })
          console.log("script 1")
@@ -135,22 +169,52 @@ $(function (){
    btnIssue.click(function () {
           form1.hide();
           tb3.hide();
-           form.show()
            tb.hide()
+           form.show()
+           img.hide()
+           form2.hide()
+           tb2.hide()
+           msg.hide()
+           $('#stb').hide();
+           $('#btb').hide();
+           $('#atb').hide();
    })
 
    btnReturn.click(function(){
        form.hide()
        tb3.hide()
-       form1.show();
        tb.hide()
+       form2.hide()
+       form1.show();
+       img.hide()
+       tb2.hide()
+       msg.hide()
+       $('#stb').hide();
+       $('#btb').hide();
+       $('#atb').hide();
    })
+   ck.click(function(){
+    form.hide()
+    tb3.hide()
+    tb.hide()
+    form1.hide();
+    img.hide()
+    tb2.hide()
+    form2.show();
+    $('#stb').hide();
+    $('#btb').hide();
+    $('#atb').hide();
+})
 
    viewBooks.click(function (){
        
              form.hide()
              form1.hide()
-             tb.hide()        
+             form2.hide()
+             tb.hide()    
+             tb2.hide()
+             img.hide()
+             msg.hide()    
     
             $.get('/getAllBooks', function (data, status){
       

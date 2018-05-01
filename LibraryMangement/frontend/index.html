@@ -8,34 +8,81 @@
     <script src="jquery.js"></script>
     <script src="script.js"></script>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
-</head>
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- Bootstrap core CSS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+<!-- Material Design Bootstrap -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.0/css/mdb.min.css" rel="stylesheet">
+
+  </head>
 <body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark primary-color">
+
+        <!-- Navbar brand -->
+        <a class="navbar-brand" href="/">Library</a>
     
-     <h1 id="head"> Library</h1>
+        <!-- Collapse button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav" aria-controls="basicExampleNav"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    
+        <!-- Collapsible content -->
+        <div class="collapse navbar-collapse" id="basicExampleNav">
+    
+            <!-- Links -->
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a id="1"class="nav-link" href="#">Issue
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a id="2" class="nav-link" href="#">Return</a>
+                </li>
+                <li class="nav-item">
+                    <a id="3"class="nav-link" href="#">View Books</a>
+                </li>
+                <li class="nav-item">
+                    <a id="view"class="nav-link" href="#">All User Status</a>
+                </li>
+                <li class="nav-item">
+                    <a id="ck"class="nav-link" href="#">Check Status</a>
+                </li>
+            </ul>
+            <!-- Links -->
+    
+            <form class="form-inline">
+                <div class="md-form mt-0">
+                    <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+                </div>
+            </form>
+        </div>
+        <!-- Collapsible content -->
+    
+    </nav>
 
-     <button id="1"class="btn btn-danger">Issue</button>
-     <button id="2"class="btn btn-danger">Return</button>
-     <button id="3"class="btn btn-danger">View Books</button>
-     <button class="btn btn-danger" id="view">View Status</button>
+   <img id="img" src="bkground.jpg" width="1600px" height="900px"/>
 
-     <div id="form"> <h5 id="issue">Issue</h5> 
+     <div id="form"> <h5 >Issue</h5> 
               <input type="text" id="uid" placeholder="User id"><br><br>
               <input type="text" id="name" placeholder="Name"><br><br>
                 <input type="text" id="bktitle" placeholder="Book title"><br><br>
-                <input type="text" id="issuedate" placeholder="Issuedate"><br><br>
-                <input type="text" id="returndate" placeholder="Returndate"><br><br>
                 <button  id="btn" class="btn btn-primary"> Issue</button>
 
    </div>
 
-      <div id="form2"> 
+      <div id="form2" > 
             <input type="text" placeholder="User Id" id="Cid"><br><br>
             <input type="text" placeholder="Name" id="Cname"><br><br>
             <button id="btn2" class="btn btn-primary">Check</button>
       </div>
 
-      <table class="table" id="tb2" >
+      <table class="table table-bordered" id="tb2" >
+          <h1 id="btb" style="text-align: center">Status of Issue Books</h1>
         <thead>
              <tr>
                   <th class="col-2" >UserID</th>
@@ -48,9 +95,12 @@
              </tr>
         </thead>
      <tbody id="mylist">
+       </tbody>
+       </table>
 
   <br>
-      <table class="table" id="tb" >
+      <table class="table table-bordered" id="tb" >
+          <h1 id="stb" style="text-align: center">Status</h1>
         <thead>
              <tr>
                   <th class="col-2" >UserID</th>
@@ -78,7 +128,8 @@
      </div>
 
 
-     <table class="table" id="tb3" >
+     <table class="table table-bordered" id="tb3" >
+         <h1 id="atb" style="text-align: center">All Books</h1>
       <thead>
            <tr>
                 <th class="col-4" >No.</th>
@@ -93,5 +144,7 @@
 </table> 
 
         <div id="msg"></div>
+
+        
 </body>
 </html>
