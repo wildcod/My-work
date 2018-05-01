@@ -83,7 +83,7 @@ app.post('/addBooks' , (req,res) => {
         res.redirect('/')
     })
     .catch((err) => {
-         res.send(err)
+         res.send("No Such User")
     })
 
 })
@@ -122,14 +122,16 @@ app.get('/getAllBooks', (req,res) => {
 })
 
 app.post('/signup', (req,res) => {
-
-    userid =  parseInt(req.body.userid);
-    password = req.body.password;
+     console.log('jo')
+   let name =  req.body.myname;
+   let password = req.body.password;
  
-    db.addUsers(userid,password)
+    db.addUsers(name,password)
     .then((users)=>{
-         
-          res.redirect('/login')
+        console.log(users)
+        let id = "Your Id : " + users.insertId
+       
+          res.render('login',{id})
     })
     .catch(()=>{
 
@@ -154,4 +156,4 @@ app.get('/signup' , (req,res) => {
 })
 
 
-app.listen(1020 , ()=> console.log('server is start at 1020'))
+app.listen(1120 , ()=> console.log('server is start at 1120'))

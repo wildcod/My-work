@@ -44,7 +44,8 @@ connection.query(
 
 connection.query(
     `CREATE TABLE IF NOT EXISTS validusers (
-         userid  int(10),
+         userid  int(10) AUTO_INCREMENT PRIMARY KEY,
+         name VARCHAR(10),
          password VARCHAR(20)
          )`,
     function(err,result){
@@ -59,7 +60,7 @@ connection.query(
 
 connection.query(
     `CREATE TABLE IF NOT EXISTS libbooks (
-         id  int(6),
+         id  int(6) ,
          books VARCHAR(30),
          author VARCHAR(20)
          )`,
@@ -167,51 +168,65 @@ function addNewIssue (Id,Name){
     return new Promise(function (resolve,reject){
 
         connection.query(
-            ' select name from users where FIND_IN_SET(?,userid)',
-               [Id]   
-            ,
-            function (err,results){
-                console.log(results.length)
-                if(results.length == 0){
+            `select * from validusers where userid = ?`,
+            [Id],
+            function(err,results){
+                console.log("valid : " + results.length)
+                if(results.length > 0){
+
                     connection.query(
-                        `insert into users values (?,?,?,?)`,
-                        [Id,1,2,Name],
+                        'select name from users where FIND_IN_SET(?,userid)',
+                           [Id] ,
                         function (err,results){
-                            if(err){
-                                reject(err)
-                            }else{
-                                resolve(results)
+                            console.log("users : " + results.length)
+                            if(results.length == 0){
+                                connection.query(
+                                    `insert into users values (?,?,?,?)`,
+                                    [Id,1,2,Name],
+                                    function (err,results){
+                                        if(err){
+                                            reject(err)
+                                        }else{
+                                            resolve(results)
+                                        }
+                                    }
+                                )
+                            }
+                            else{
+            
+                                connection.query(
+                                    ` select Issuebooks from users where userid = ?`,
+                                    [Id],
+                                    function(err,results){
+                                        console.log("ISSUE : " + results[0].Issuebooks)
+                                      if(results[0].Issuebooks < 3){
+                                         connection.query(
+                                            `update users set unIssuebooks = unIssuebooks-1 , issuebooks = issuebooks+1 where userid = ?`,
+                                            [Id],
+                                            function (err,results){
+                                                if(err){
+                                                    reject(err)
+                                                }else{
+                                                    resolve(results)
+                                                }
+                                            }
+                                        )
+                                    }
+                                    else{
+                                      resolve(-1)
+                                    }
+                                    }
+                                
+                                )
+                                
                             }
                         }
                     )
-                }
-                else{
 
-                    connection.query(
-                        ` select Issuebooks from users where userid = ?`,
-                        [Id],
-                        function(err,results){
-                          if(results[0].Issuebooks < 3){
-                             connection.query(
-                                `update users set unIssuebooks = unIssuebooks-1 , issuebooks = issuebooks+1 where userid = ?`,
-                                [Id],
-                                function (err,results){
-                                    if(err){
-                                        reject(err)
-                                    }else{
-                                        resolve(results)
-                                    }
-                                }
-                            )
-                        }
-                        else{
-                          resolve(-1)
-                        }
-                        }
-                    
-                    )
-                    
                 }
+              else{
+                   reject(err)
+              }
             }
         )
 
@@ -224,7 +239,7 @@ function deleteReturn (RId,RName){
     return new Promise(function (resolve,reject){
 
         connection.query(
-            ' select name from users where FIND_IN_SET(?,userid)',
+            'select name from users where FIND_IN_SET(?,userid)',
                [RId]   
             ,
             function (err,results){
@@ -272,13 +287,13 @@ function getAllBooks () {
     })
 
 }
-function addUsers (userid,password) {
-
+function addUsers (name,password) {
+       console.log("db")
     return new Promise(function (resolve,reject){
 
         connection.query(
-            `insert into validusers values (?,?)`,
-            [userid,password],
+            `insert into validusers (name,password) values (?,?)`,
+            [name,password],
             function (err, rows,cols){
                 if(err){
                     reject(err)
