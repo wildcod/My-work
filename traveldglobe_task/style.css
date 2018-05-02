@@ -1,0 +1,84 @@
+#main{
+    border: 2px solid white;
+    background-color: #f57c00;
+    width: 400px;
+    height: 250px;
+    margin-left: 33%;
+    border-radius: 25px;
+}
+
+#icon{
+    margin-top:8px;
+    margin-left: 15px;
+    font-size: 20px;
+    color: white;
+
+}
+
+#left2{
+    margin-top: 4px;
+}
+
+#left{
+    margin-top: 6px;
+   font-size: 10px;
+   margin-left: 17px;
+   color: white;
+   line-height: 1.1;
+}
+
+
+#right{
+    text-align: end;
+    margin-top: 12px;
+    margin-right: 17px;
+    line-height: 1;
+}
+
+#r1{
+    color: white;
+    font-weight: bold;
+}
+
+#r2{
+    font-size: 40px;
+    word-spacing: 0px;
+}
+#r3{
+    font-size: 25px;
+    font-weight: 900;
+    color: white;
+}
+
+#r4{
+    font-size: 28px;
+    font-weight: bold;
+    color: #0d47a1;
+}
+
+#r5{
+    font-size: 28px;
+    font-weight: bold;
+    color: #0d47a1;
+}
+#off{
+    margin-left: 85px;
+    width: 75px;
+    height: 15px;
+    padding-top: 2px;
+    background-color: white;
+    text-align: center;
+    font-size: 11px;
+    color: #f57c00;
+}
+
+#r6{
+    color: white;
+}
+
+#train{
+    font-size: 100px;
+    margin-top: 8px;
+    margin-left: 20px;
+}
+
