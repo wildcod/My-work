@@ -9,13 +9,28 @@ class NameEditor extends Component {
 
      render(){
          return <div >
+                    
+
                      <div id="NameEditor">
                      <h5> Type Your Name </h5>
                      <hr/>
-                      Name :  <input id="NameEdi" type="text" placeholder="Full Name" onChange ={this.props.NameChange} 
-                                 value={this.props.State.FullName}
-                      /> 
-                      </div>
+                       <div className="md-form "> 
+                            <input  type="text" id="form1" placeholder="Name" className="form-control"  onChange ={this.props.NameChange} />
+        
+                        </div>
+               
+                      {/* <button className="btn btn-primary" onClick= {this.props.DbNameChange}> Submit</button> */}
+                     </div>
+                      <br/><br/>
+                      <div id="NameEditor">
+                      <h5> Upoload Photo </h5>
+                      <hr/>
+                      <div id="PhotoEditor">
+                        <input type="file" onChange={this.props.PhotoChange} /> 
+                      <progress value="0" max="100" id="uploader">0%</progress><br/>
+                      <button className="btn btn-danger" onClick={this.props.uploadPhoto}> uploadFile </button>
+                </div>
+                </div>
                 </div>
      } 
 }

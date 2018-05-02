@@ -8,6 +8,8 @@ import NameEditor from '../Editor-Com/Name_Editor/Name_Editor'
  import ContactEditor from '../Editor-Com/Contact_Editor/Contact_Editor'
  import SkillsEditor from '../Editor-Com/Skills_Editor/Skills_Editor'
  import CertificateEditor from '../Editor-Com/Certificate_Editor/Certificate_Editor'
+ import ObjectiveEditor from '../Editor-Com/Objective_Editor/Objective_Editor'
+ import Download from '../Download/Download'
 import './Layout.css'
 
 class Layout extends Component {
@@ -18,6 +20,9 @@ class Layout extends Component {
                               <div className="col-md-3">
                                    <Route path="/name" render={() =>  <NameEditor NameChange = {this.props.NameChange} 
                                                                      State = {this.props.State}
+                                                                     DbNameChange = {this.props.DbNameChange}
+                                                                     PhotoChange = {this.props.PhotoChange}
+                                                                     uploadPhoto = {this.props.uploadPhoto}
                                    /> } />
                                    <Route path="/experience" render={() => <ExpEditor 
                                                                  JobTitleChange = {this.props.JobTitleChange}
@@ -43,6 +48,11 @@ class Layout extends Component {
                                    />}
                                    />
 
+                                   <Route path="/objective" render={ () => <ObjectiveEditor 
+                                                                 ObjectiveChange={this.props.ObjectiveChange}        
+                                   />}
+                                   />
+
                                    <Route path="/contact-information" render={ () => <ContactEditor 
                                                                   EmailChange = {this.props.EmailChange}
                                                                   ResAddressChange = {this.props.ResAddressChange}
@@ -57,12 +67,15 @@ class Layout extends Component {
                                    />}
                                    />
 
+                                   
+
                               </div>
                               <div className="col-md-9">
                                    <Preview State = {this.props.State}
                                    />
                               </div>
                      </div> 
+                      <Download/>
                      </div>
            
     }

@@ -8,7 +8,7 @@ class Project extends Component {
         return <div>
                   <Link to="/project" id="link">
                      <div id="Pro">
-                         <h1 id="heading-Project"> Project</h1>
+                         <h1 id="heading-Project"> <b><b>Project</b></b></h1>
                           <h4 id="Project">
                             {this.props.State.Project}
                        </h4>

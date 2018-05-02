@@ -6,7 +6,7 @@ import './SideBlog.css'
 class SideBlog extends Component {
     
     render() {
-         return <div id="SideBlog">
+         return <div id="SideBlog"> <br/><br/><br/>
                        <Contact State = {this.props.State}/>
                        <Skills State = {this.props.State}/>
                 </div>

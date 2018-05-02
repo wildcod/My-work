@@ -7,9 +7,13 @@ class CertificateEditor extends Component {
          return <div >
                      <div id="CertificateEditor">
                      <h5> Certificate/Course </h5>
-                     <hr/>
-                       <input  type="text" placeholder="Project" onChange ={this.props.CertificateChange} /> 
+                     
+                       {/* <input  type="text" placeholder="Project" onChange ={this.props.CertificateChange} />  */}
                       </div>
+                      <div class="md-form">
+                      <textarea id="textarea-char-counter" placeholder="Certificate" class="form-control md-textarea" length="120" rows="3" onChange={this.props.CertificateChange}></textarea>
+                    </div>
+
                 </div>
      } 
 }

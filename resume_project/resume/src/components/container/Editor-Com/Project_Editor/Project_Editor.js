@@ -7,9 +7,14 @@ class ProjectEditor extends Component {
          return <div >
                      <div id="ProjectEditor">
                      <h5> Project </h5>
-                     <hr/>
-                     Project :  <input  type="text" placeholder="Project" onChange ={this.props.ProjectChange} /> 
+                     
+                     {/* Project :  <input  type="text" placeholder="Project" onChange ={this.props.ProjectChange} />  */}
                       </div>
+
+                    <div class="md-form">
+                      <textarea id="textarea-char-counter" placeholder="Project" class="form-control md-textarea" length="120" rows="3" onChange={this.props.ProjectChange}></textarea>
+                    </div>
+
                 </div>
      } 
 }

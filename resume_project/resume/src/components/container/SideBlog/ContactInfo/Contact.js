@@ -7,13 +7,13 @@ class Contact extends Component {
         return <div>
         <Link to="/contact-information" id="link">
                <div id="Contact">
-                    <h4 id="heading-Contact"> Contact Information</h4>
-                    <div id="List">
-                      <h6>Email</h6>
+                    <h4 id="heading-Contact"> <b>Contact Information</b></h4>
+                    <div id="CList">
+                      <h6 id="Sub"><b>Email</b></h6>
                       <p id="f1">{this.props.State.Email}</p>
-                      <h6 >Address</h6>
+                      <h6 id="Sub"><b>Address</b></h6>
                       <p id="f1">{this.props.State.ResAddress}</p>
-                      <h6>Phone</h6>
+                      <h6 id="Sub"><b>Phone</b></h6>
                       <p id="f1">{this.props.State.Phone}</p>
                      </div>
 

@@ -8,16 +8,16 @@ class Preview extends Component {
     render() {
         return  <div id="Preview" className="container-fluid">
                      <div className="row">
-                              <div >
+                              <div  >
                                     <SideBlog State = {this.props.State}/>
                               </div>
-                              <div className="col">
+                              <div className="col" id="Resume">
                                    <Resume State = {this.props.State}/>
                               </div>
                      </div>
-                     
-                     
-              </div>
+                      
+                </div>
+         
             
 
     }

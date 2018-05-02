@@ -4,21 +4,43 @@ import './Contact_Editor.css'
 class ContactEditor extends Component {
      render(){
          return <div  id="ContactEditor">
+         <br/>
                     <h5>Contact Information</h5>
                     <hr/>
-                     <p>  Email<br/>
+                     {/* <p>  Email<br/>
                      <input type="text" placeholder="Email"  onChange={this.props.EmailChange}/><br/>
-                     </p>
+                     </p> */}
 
-                     <p>
+
+                      <br/>             
+                    <div className="md-form">
+                        <i className="fa fa-envelope prefix"></i>
+                        <input type="text" id="inputIconEx1" placeholder="Email" className="form-control" onChange={this.props.EmailChange}/>
+                        
+                    </div>
+
+
+                     {/* <p>
                      Address<br/>
                      <input type="text" placeholder="Address"   onChange={this.props.ResAddressChange}/><br/>
-                     </p>
+                     </p> */}
 
-                    <p>
+                    <div class="md-form">
+                        <textarea id="textarea-char-counter" placeholder="Address" class="form-control md-textarea" length="20" rows="1" onChange={this.props.ResAddressChange}></textarea>
+                    </div>
+
+
+
+
+
+                    {/* <p>
                      Phone<br/>
-                     <input type="text" placeholder="Phone"   onChange={this.props.PhoneChange}/><br/>
-                     </p>
+                     <input type="number" placeholder="Phone"   onChange={this.props.PhoneChange}/><br/>
+                     </p> */}
+
+                     <div class="md-form">
+                        <input type="number" id="form1" class="form-control" placeholder="Phone" onChange={this.props.PhoneChange}/>
+                    </div>
 
                 </div>
      } 

@@ -8,7 +8,7 @@ class Certificate extends Component {
         return <div>
                   <Link to="/certificate" id="link">
                      <div id="Cer">
-                         <h1 id="heading-Certificate"> Certificate</h1>
+                         <h1 id="heading-Certificate"><b><b> Certificate</b></b></h1>
                           <h4 id="Certificate">
                             {this.props.State.Certificate}
                        </h4>

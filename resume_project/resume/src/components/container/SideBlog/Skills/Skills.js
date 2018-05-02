@@ -13,7 +13,7 @@ class Skills extends Component {
         return <div>
             <Link to="/skills" id="link">
                <div id="Skills">
-                      <h4 id="heading-Skills"> Skills</h4>
+                      <h4 id="heading-Skills"> <b>Skills</b></h4>
                       <ul id="List">
                           {/* <li>Cricket</li>
                           <li>java   </li>

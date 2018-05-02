@@ -1,15 +1,17 @@
 #heading-Contact{
     font-family: 'Bitter' , 'Serif';
+    color: honeydew;
 }
 
 #Contact {
-    margin-left : 40px;
-    margin-top : 130px;
-    width: 250px;
+    
+    width: 300px;
 }
 
-#List {
-   text-align: left;
+#CList {
+    text-align: start;
+    margin-left: 58px;
+    color: white;
 }
 
 #Contact:hover{
@@ -18,7 +20,9 @@
 }
 
 #f1{
-     font-size: 12px;
+     font-size: 13px;
+     
+     text-align: start;
 }
 
 #link{

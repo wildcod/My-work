@@ -1,21 +1,20 @@
-#Project {
+#Objective {
     margin-left: 28px;
     font-weight: 100;
     font-size: 14px;
-}
-#heading-Project{
-    font-size: 20px;
-    margin-right: 433px;
-    font-weight: 130;
-    font-family: 'Bitter' , 'Serif';
+    flex-wrap: wrap;
+    width: 500;
 }
 
-#Pro {
-     margin-top : 60px;
+
+#Obj {
+     margin-top : 20px;
      text-align: left;
+     width: 530px;
+     height:60px;
 }
 
-#Pro:hover{
+#Objective:hover{
     border : 2px solid red;
     cursor: pointer;
 }
@@ -27,7 +26,7 @@
 
 @media (max-width : 1000px){
      
-    #Pro{
+    #Obj{
         width: 100px;
     }
 }

@@ -9,7 +9,12 @@
 #EduLeft{
  margin-right: 100px; 
 font-weight: 100;
-font-size: 12px; 
+font-size: 14px; 
+text-align: end;
+
+}
+#EduList{
+    margin-bottom: 3px;
 }
 
 #Education {
@@ -20,11 +25,12 @@ font-size: 12px;
 #heading-Education{
     font-size: 20px;
     margin-right: 408px;
-    font-weight: 100px;
+    font-weight: 130px;
     font-family: 'Bitter' , 'Serif';
 }
 #Edu {
      margin-top : 60px;
+     text-align: left;
 }
 
 #Edu:hover{
@@ -33,7 +39,15 @@ font-size: 12px;
 }
 
 
+
 #link{
     color: black;
     text-decoration: unset;
+}
+
+@media (max-width : 1000px){
+     
+    #Edu{
+        width: 100px;
+    }
 }

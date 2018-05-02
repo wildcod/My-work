@@ -7,20 +7,36 @@
 
 
 #ExpLeft{
-     margin-right: 100px; 
+    margin-right: 100px; 
     font-weight: 100;
-    font-size: 12px; 
+    font-size: 13px; 
+    text-align: end;
 }
 
 #heading-Experience{
     font-size : 20px;
     margin-right: 400px;
-    font-weight: 100;
+    font-weight: 130;
     font-family: 'Bitter' , 'Serif';
+}
+
+@media (max-width : 1000px){
+     
+    #Exp{
+        width: 100px;
+    }
+}
+
+
+
+
+#ExpList{
+    margin-bottom: 3px;
 }
 
 #Exp {
     margin-top : 100px;
+    text-align: left;
 }
 
 #Exp:hover{
