@@ -28,7 +28,7 @@ app.get('/' , (req,res) => {
      if(req.user){
 
         if(req.user.username == "amazon" && req.user.password == "amazon"){
-            return res.redirect('/addproducts')
+            return res.redirect('/myproducts')
          }
 
         return res.sendFile('index.html', { root: path.join(__dirname, './frontend') })
@@ -55,7 +55,7 @@ app.get('/view', (req, res) => {
 
 })
 
-app.get('/addproducts',(req,res) => {
+app.get('/myproducts',(req,res) => {
       res.render('products')
 })
 
@@ -63,7 +63,7 @@ app.post('/products', (req, res) => {
      
      db.addProducts(req.body.name,req.body.manufacturer,req.body.price)
      .then(()=>{
-            res.redirect('/')
+            res.redirect('/addProducts')
      })
      .catch((err)=>{
          console.error(err)
@@ -89,6 +89,7 @@ app.post('/addCart' , (req, res) => {
     .catch((err) => {
 
     })
+
 })
 
 app.get('/addToCart', (req,res)=>{
@@ -140,9 +141,68 @@ app.post('/signup', (req, res) => {
     })
 })
 
+
+app.post('/deleteProducts', (req,res) => {
+
+     db.deleteProducts(parseInt(req.body.id),req.body.name)
+     .then(()=>{
+         res.redirect('/');
+     })
+
+})
+
+app.post('/updateProducts', (req,res) => {
+
+    db.updateProducts(parseInt(req.body.id),req.body.name,req.body.manufacturer,req.body.price)
+    .then(()=>{
+        res.redirect('/');
+    })
+
+})
+
 app.post('/login', passport.authenticate('local', {
     failureRedirect: '/login',
     successRedirect: '/'
 }))
 
-app.listen(1212 , () => console.log('server is start at 1212'))
+
+app.post('/deleteFromCart', (req,res) => {
+
+    db.deletefromcart(req.body.id)
+    .then(() => {
+        // let i = 0;
+        // for(data of temp){
+        //     console.log(data[0])
+        //     if(data[0].id == req.body.id){
+        //         temp.splice(i, 1);
+        //     }
+        //     i++;
+        // }
+        // console.log("data " + data)
+
+       db.getAllCartProduct()
+       .then((cart ) => {
+           temp = []
+            temp.push(cart)
+            res.redirect('/addToCart')
+       })
+              
+    }).catch(()=>{
+
+    })
+
+})
+
+app.get('/deleteProducts',(req,res) => {
+    res.render('deleteProducts')
+})
+
+app.get('/updateProducts',(req,res) => {
+    res.render('updateProducts')
+})
+
+app.get('/addProducts',(req,res) => {
+    res.render('addProducts')
+})
+
+app.listen(7788 , () => console.log('server is start at 5566'))

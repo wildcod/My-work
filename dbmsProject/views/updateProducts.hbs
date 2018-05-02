@@ -15,15 +15,22 @@
 <style>
       #pro{
             text-align: center;
-            margin-top: 80px;
+            margin-top: 20px;
       }
 </style>
 </head>
 <body>
   <div id="pro">
-     <a href="/deleteProducts"><button class="btn btn-primary">Delete Products</button></a> 
-      <a href="/addProducts"><button class="btn btn-primary">Add Products</button></a> 
-       <a href="/updateProducts"><button class="btn btn-primary">Update Products</button></a> 
+      <h1>Update Products</h1>
+       <form method="POST" action="/updateProducts">
+            <input name="id" placeholder="Id"><br><br>
+            <input name="name" placeholder="ProductName"><br><br>
+            <input name="manufacturer" placeholder="Manufacturer"><br><br>
+            <input name="price" placeholder="Price"><br><br>
+            <button class="btn btn-primary">Submit</button>
+      </form>
+      <br>
+      <a href="/login">Login</a>  
 </div>
 
 </body>

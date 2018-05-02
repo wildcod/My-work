@@ -1,7 +1,7 @@
 const mysql = require('mysql2')
 
 const connection = mysql.createConnection({
-    host : 'localhost',
+    host : "127.0.0.1",
     database : 'products',
     user : 'products',
     password : 'products'
@@ -186,7 +186,92 @@ function addToCart (id,name,manufacturer,price) {
 
 }
 
+function deletefromcart (id) {
+
+    return new Promise(function (resolve,reject){
+
+        connection.query(
+            'delete from cart where id = ?',
+             [id],
+            function (err, rows,cols){
+                if(err){
+                    reject(err)
+                }
+                else{
+                    resolve(rows)
+                }
+            }
+        )
+
+    })
+
+}
+
+function deleteProducts (id,name) {
+
+    return new Promise(function (resolve,reject){
+
+        connection.query(
+            'delete from products where id = ? and name = ?',
+             [id,name],
+            function (err, rows,cols){
+                if(err){
+                    reject(err)
+                }
+                else{
+                    resolve(rows)
+                }
+            }
+        )
+
+    })
+
+}
+
+function updateProducts (id,name,manufacturer,price) {
+
+
+    return new Promise(function (resolve,reject){
+
+        connection.query(
+            'update products set name = ?,manufacturer = ?, price = ? where id= ?',
+             [name,manufacturer,price,id],
+            function (err, rows,cols){
+                if(err){
+                    reject(err)
+                }
+                else{
+                    resolve(rows)
+                }
+            }
+        )
+
+    })
+}
+
+
+function getAllCartProduct () {
+
+    return new Promise(function (resolve,reject){
+
+        connection.query(
+            'select * from cart',
+            function (err, rows,cols){
+                if(err){
+                    reject(err)
+                }
+                else{
+                    resolve(rows)
+                }
+            }
+        )
+
+    })
+
+}
+
 
 exports = module.exports = {
-      addProducts,addView,getCart,addUsers,getUser,addToCart
+      addProducts,addView,getCart,addUsers,getUser,addToCart,deletefromcart,getAllCartProduct,
+      deleteProducts,updateProducts
 } 

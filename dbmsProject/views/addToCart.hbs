@@ -15,33 +15,33 @@
 </head>
 <body>
         <h1 style="text-align :center"> Cart </h1>
+        <form method="GET" action="/buyCartProducts" style="text-align:end">
+                 <button class="btn btn-primary">Buy</button>
+      </form>
  <div class="container">
             <div class="card-group row"  >
                  {{#each temp as |data|}}
                {{#each data as |raw|}}
-
-               <div class="card-body col-4">
-                 <h5 class="card-title"><b>Phone</b></h5>
+                 <div class="card-body col-4">
+                <h5 class="card-title">Phone</h5>
                     <div>
+                        <br>
                         <p >{{raw.name}}</p>
                         <p >{{raw.manufacturer}}</p>
                         <p >{{raw.price}}</p>
-                        <button id={{raw.id}}>Delete</button>
-                       
-                    </div>
+                <form method="POST" action="/deleteFromCart">  
+                <button id={{raw.id}} name="id" value="{{raw.id}}" >Delete </button> 
+                </form>
                 </div>
-            {{!-- <div class="card" style="width: 18rem;">
-                  
-            </div> --}}
+                </div>
+                
             {{/each}}
              {{/each}}
             </div>
             </div>
             <br>
 
-      <form method="GET" action="/buyCartProducts" style="text-align:center">
-                 <button class="btn btn-primary">Buy</button>
-      </form>
+      
     
 
 </body>
